@@ -23,6 +23,10 @@ public class Empresa {
     public String getRazonSocial() {
         return razonSocial;
     }
+
+    public ListaEmpleados getLisEmple() {
+        return lisEmple;
+    }
     public void mostrarCantidadEmpleados(){
         System.out.println("Cantidad de empleados: "+ lisEmple.definirTamaño());
     }

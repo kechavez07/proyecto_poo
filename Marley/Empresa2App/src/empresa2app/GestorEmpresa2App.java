@@ -27,6 +27,21 @@ public class GestorEmpresa2App {
         empresa1.mostrarCantidadEmpleados();
         empresa1.sumaSueldo();
         objListaEmpleado.compararEmpleadoEmpresa();
+        
+        Empleado objempleado6= new Empleado("00005","Maria Jose",350.0f);
+        Empleado objempleado7= new Empleado("00005","jose",450.0f);
+        Empleado objempleado8= new Empleado("00006","Carlos",400.0f);
+        Empleado objempleado9= new Empleado("00006","Ramon",550.0f);
+        Empleado objempleado10= new Empleado("00007","Esteban",560.0f);
+        
+        ListaEmpleados objListaEmpleado1= new ListaEmpleados();
+        objListaEmpleado.adicionalEmpleado(objempleado6);
+        objListaEmpleado.adicionalEmpleado(objempleado7);
+        objListaEmpleado.adicionalEmpleado(objempleado8);
+        objListaEmpleado.adicionalEmpleado(objempleado9);
+        objListaEmpleado.adicionalEmpleado(objempleado10);
+        Empresa empresa2= new Empresa("Sony",objListaEmpleado);
+        objListaEmpleado1.mismaEmpresa(empresa1, empresa2);
     }
     
 }
