@@ -13,6 +13,7 @@ public class GestorEmpresa2App {
         Empleado objempleado3= new Empleado("00002","Jorge",400.0f);
         Empleado objempleado4= new Empleado("00002","Cristian Josue",550.0f);
         Empleado objempleado5= new Empleado("00005","Dario Esteban",560.0f);
+//        Empleado objempleado6= new Empleado("00005","Dario Esteban",570.0f);
         
         ListaEmpleados objListaEmpleado= new ListaEmpleados();
         objListaEmpleado.adicionalEmpleado(objempleado1);
@@ -20,6 +21,8 @@ public class GestorEmpresa2App {
         objListaEmpleado.adicionalEmpleado(objempleado3);
         objListaEmpleado.adicionalEmpleado(objempleado4);
         objListaEmpleado.adicionalEmpleado(objempleado5);
+//        objListaEmpleado.adicionalEmpleado(objempleado6);
+        
         Empresa empresa1= new Empresa("Yupi",objListaEmpleado);
         empresa1.mostrarCantidadEmpleados();
         empresa1.sumaSueldo();
