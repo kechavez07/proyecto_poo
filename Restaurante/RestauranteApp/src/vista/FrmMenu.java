@@ -28,61 +28,64 @@ public class FrmMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jlFuerte = new javax.swing.JLabel();
+        jlBebida = new javax.swing.JLabel();
+        jlEntrada = new javax.swing.JLabel();
+        jlPostre = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnBebidas = new javax.swing.JButton();
+        btnEntrada = new javax.swing.JButton();
+        btnFuerte = new javax.swing.JButton();
+        btnPostre = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jmSobre = new javax.swing.JMenu();
-        jmAyuda = new javax.swing.JMenu();
+        jmenuBarRestaurante = new javax.swing.JMenuBar();
+        jMAyuda = new javax.swing.JMenu();
+        miPreguntas = new javax.swing.JMenuItem();
+        jMSobre = new javax.swing.JMenu();
+        miVersion = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Segundo.png"))); // NOI18N
+        jlFuerte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Segundo.png"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Bebidas.png"))); // NOI18N
+        jlBebida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Bebidas.png"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Entrada.png"))); // NOI18N
+        jlEntrada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Entrada.png"))); // NOI18N
 
-        jLabel3.setBackground(new java.awt.Color(102, 102, 102));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Postre.png"))); // NOI18N
+        jlPostre.setBackground(new java.awt.Color(102, 102, 102));
+        jlPostre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Postre.png"))); // NOI18N
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Decorar.png"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
-        jButton1.setText("Bebidas");
+        btnBebidas.setBackground(new java.awt.Color(255, 204, 204));
+        btnBebidas.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
+        btnBebidas.setText("Bebidas");
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 204));
-        jButton2.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
-        jButton2.setText("Entrada");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEntrada.setBackground(new java.awt.Color(255, 204, 204));
+        btnEntrada.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
+        btnEntrada.setText("Entrada");
+        btnEntrada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEntradaActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 204, 204));
-        jButton3.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
-        jButton3.setText("Fuerte");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnFuerte.setBackground(new java.awt.Color(255, 204, 204));
+        btnFuerte.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
+        btnFuerte.setText("Fuerte");
+        btnFuerte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnFuerteActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 204, 204));
-        jButton4.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
-        jButton4.setText("Postre");
+        btnPostre.setBackground(new java.awt.Color(255, 204, 204));
+        btnPostre.setFont(new java.awt.Font("Cooper Black", 1, 18)); // NOI18N
+        btnPostre.setText("Postre");
 
         jLabel5.setFont(new java.awt.Font("Cooper Black", 1, 48)); // NOI18N
         jLabel5.setText("Escoge  ");
@@ -98,25 +101,25 @@ public class FrmMenu extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnBebidas)
                         .addGap(80, 80, 80)
-                        .addComponent(jButton2))
+                        .addComponent(btnEntrada))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jlEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlFuerte, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlPostre, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addComponent(jButton3)
+                        .addComponent(btnFuerte)
                         .addGap(70, 70, 70)
-                        .addComponent(jButton4)
+                        .addComponent(btnPostre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -145,32 +148,53 @@ public class FrmMenu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(btnBebidas)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton2)
-                                .addComponent(jButton3)
-                                .addComponent(jButton4)))
+                                .addComponent(btnEntrada)
+                                .addComponent(btnFuerte)
+                                .addComponent(btnPostre)))
                         .addContainerGap(60, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jlFuerte, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jlPostre, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jmSobre.setText("Sobre el Sistema");
-        jMenuBar1.add(jmSobre);
+        jMAyuda.setBackground(new java.awt.Color(255, 204, 204));
+        jMAyuda.setText("Ayuda");
 
-        jmAyuda.setText("Ayuda");
-        jMenuBar1.add(jmAyuda);
+        miPreguntas.setBackground(new java.awt.Color(255, 204, 204));
+        miPreguntas.setText("Preguntas");
+        miPreguntas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miPreguntasActionPerformed(evt);
+            }
+        });
+        jMAyuda.add(miPreguntas);
 
-        setJMenuBar(jMenuBar1);
+        jmenuBarRestaurante.add(jMAyuda);
+
+        jMSobre.setBackground(new java.awt.Color(255, 204, 204));
+        jMSobre.setText("Sobre el Sistema");
+
+        miVersion.setBackground(new java.awt.Color(255, 204, 204));
+        miVersion.setText("Version");
+        jMSobre.add(miVersion);
+
+        jmenuBarRestaurante.add(jMSobre);
+
+        jMenu1.setBackground(new java.awt.Color(255, 204, 204));
+        jMenu1.setText("Historial");
+        jmenuBarRestaurante.add(jMenu1);
+
+        setJMenuBar(jmenuBarRestaurante);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,13 +210,17 @@ public class FrmMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnEntradaActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnFuerteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuerteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnFuerteActionPerformed
+
+    private void miPreguntasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miPreguntasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_miPreguntasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,20 +258,23 @@ public class FrmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton btnBebidas;
+    private javax.swing.JButton btnEntrada;
+    private javax.swing.JButton btnFuerte;
+    private javax.swing.JButton btnPostre;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMAyuda;
+    private javax.swing.JMenu jMSobre;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenu jmAyuda;
-    private javax.swing.JMenu jmSobre;
+    private javax.swing.JLabel jlBebida;
+    private javax.swing.JLabel jlEntrada;
+    private javax.swing.JLabel jlFuerte;
+    private javax.swing.JLabel jlPostre;
+    private javax.swing.JMenuBar jmenuBarRestaurante;
+    private javax.swing.JMenuItem miPreguntas;
+    private javax.swing.JMenuItem miVersion;
     // End of variables declaration//GEN-END:variables
 }

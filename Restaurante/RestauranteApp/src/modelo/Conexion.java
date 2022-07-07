@@ -12,8 +12,8 @@ public class Conexion {
     //Constructor
     public Conexion(){
         MongoClient mongo=new MongoClient("localhost",27017);
-        baseDatos= mongo.getDB("clinica");
-        coleccion= baseDatos.getCollection("proveedores");
+        baseDatos= mongo.getDB("Restaurante");
+        coleccion= baseDatos.getCollection("Usuario");
         System.out.println("Conexion aBD ok");
         
     }
