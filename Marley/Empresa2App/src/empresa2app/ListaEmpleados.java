@@ -61,33 +61,31 @@ public class ListaEmpleados {
         System.out.println("Mismo numero de empleados \n No permitidos");
         lisAux1.mostrarLista(); 
     }
-    public void mismaEmpresa(Empresa empresa1, Empresa empresa2){
-//        Empresa aux= new Empresa();
-//        Empresa aux2= new Empresa();
-        ListaEmpleados listaAux1= new ListaEmpleados();
-        ListaEmpleados listaAux2= new ListaEmpleados();
-        Empleado aux3= new Empleado();
-        Empleado aux4= new Empleado();
-      
-        listaAux1=empresa1.getLisEmple();
-        listaAux2=empresa2.getLisEmple();
-        ListaEmpleados aux1= new ListaEmpleados();
-        Iterator objIterator= listaEmpleado.iterator();
-        if( empresa1.getRazonSocial()!=empresa2.getRazonSocial()){
-            aux4=(Empleado)objIterator.next();
-            aux3=(Empleado)objIterator.next();
-            while(objIterator.hasNext()){
-                aux3=(Empleado)objIterator.next();
-                
-                if(aux3.getNombre()==aux4.getNombre()){
-                    aux1.adicionalEmpleado(aux3);
-                }
-                aux4=(Empleado)objIterator.next();
-            }
-            
-        }System.out.println("Misma empresa ");
-            aux1.mostrarLista();
-        
-    }
+//    public void mismaEmpresa(Empresa empresa1, Empresa empresa2){
+////        Empresa aux= new Empresa();
+////        Empresa aux2= new Empresa();
+//        ListaEmpleados listaAux1= new ListaEmpleados();
+//        ListaEmpleados listaAux2= new ListaEmpleados();
+//        Empleado aux3= new Empleado();
+//        Empleado aux4= new Empleado();
+//        listaAux1=empresa1.getLisEmple();
+//        listaAux2=empresa2.getLisEmple();
+//        ListaEmpleados aux1= new ListaEmpleados();
+//        Iterator objIterator= listaEmpleado.iterator();
+//        if( empresa1.getRazonSocial()!=empresa2.getRazonSocial()){
+//            aux4=(Empleado)objIterator.next();
+//            aux3=(Empleado)objIterator.next();
+//            while(objIterator.hasNext()){
+//                aux3=(Empleado)objIterator.next();
+//                
+//                if(aux3.getNombre()==aux4.getNombre()){
+//                    aux1.adicionalEmpleado(aux3);
+//                }
+//                aux4=(Empleado)objIterator.next();
+//            }
+//            
+//        }System.out.println("Misma empresa ");
+//            aux1.mostrarLista(); 
+//    }
     
 }

@@ -41,7 +41,8 @@ public class GestorEmpresa2App {
         objListaEmpleado.adicionalEmpleado(objempleado9);
         objListaEmpleado.adicionalEmpleado(objempleado10);
         Empresa empresa2= new Empresa("Sony",objListaEmpleado);
-        objListaEmpleado1.mismaEmpresa(empresa1, empresa2);
+        
+//        objListaEmpleado1.mismaEmpresa(empresa1, empresa2);
     }
     
 }
