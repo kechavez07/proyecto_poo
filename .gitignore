@@ -23,3 +23,8 @@
 hs_err_pid*
 /Marley/Empresa2App/dist/
 /Restaurante/RestauranteApp/nbproject/private/
+/Restaurante/RestauranteApp/build/
+<<<<<<< HEAD
+=======
+/Restaurante/RestauranteApp/dist/
+>>>>>>> 5274970d226480646777887bd44bdca31cbf6e09
