@@ -42,6 +42,7 @@ public class FrmMenu extends javax.swing.JFrame {
         jmenuBarRestaurante = new javax.swing.JMenuBar();
         jMAyuda = new javax.swing.JMenu();
         miPreguntas = new javax.swing.JMenuItem();
+        miSalir = new javax.swing.JMenuItem();
         jMSobre = new javax.swing.JMenu();
         miVersion = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
@@ -179,6 +180,9 @@ public class FrmMenu extends javax.swing.JFrame {
         });
         jMAyuda.add(miPreguntas);
 
+        miSalir.setText("Salir");
+        jMAyuda.add(miSalir);
+
         jmenuBarRestaurante.add(jMAyuda);
 
         jMSobre.setBackground(new java.awt.Color(255, 204, 204));
@@ -275,6 +279,7 @@ public class FrmMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jlPostre;
     private javax.swing.JMenuBar jmenuBarRestaurante;
     private javax.swing.JMenuItem miPreguntas;
+    private javax.swing.JMenuItem miSalir;
     private javax.swing.JMenuItem miVersion;
     // End of variables declaration//GEN-END:variables
 }

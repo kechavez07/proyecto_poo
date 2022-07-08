@@ -1,15 +1,29 @@
 
 package controlador;
 
+
 import modelo.Conexion;
+<<<<<<< HEAD
 import modelo.Ingrediente;
 import modelo.Plato;
+=======
+import vista.FrmBebidas;
+import vista.FrmConfirmacion;
+>>>>>>> 8825532 (h)
 
 public class GestorRestaurante {
      public static void main(String args[]){
          Conexion c = new Conexion();
+<<<<<<< HEAD
          datoQuemados();//kleber
         
+=======
+         FrmBebidas fBebidas=new FrmBebidas();
+         FrmConfirmacion fConfirmacion= new FrmConfirmacion();
+         ControladorRestaurante cRestaurante= new ControladorRestaurante();
+         fBebidas.setVisible(true);
+         fConfirmacion.setVisible(true);
+>>>>>>> 8825532 (h)
          
          
      }

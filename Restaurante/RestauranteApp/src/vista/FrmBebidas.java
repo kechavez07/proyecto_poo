@@ -55,6 +55,11 @@ public class FrmBebidas extends javax.swing.JFrame {
         btnRegresar.setText("Regresar");
 
         rbCoca.setBackground(new java.awt.Color(255, 255, 255));
+        rbCoca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbCocaActionPerformed(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Coca.png"))); // NOI18N
 
@@ -216,6 +221,10 @@ public class FrmBebidas extends javax.swing.JFrame {
     private void txtFantaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFantaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFantaActionPerformed
+
+    private void rbCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCocaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbCocaActionPerformed
 
     /**
      * @param args the command line arguments
