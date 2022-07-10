@@ -3,6 +3,8 @@ package controlador;
 
 
 import modelo.Conexion;
+import modelo.UsuarioDAO;
+import vista.FrmRegistrar;
 //<<<<<<< HEAD
 //import modelo.Ingrediente;
 //import modelo.Plato;
@@ -13,7 +15,12 @@ import modelo.Conexion;
 
 public class GestorRestaurante {
      public static void main(String args[]){
-         Conexion c = new Conexion();
+        Conexion c = new Conexion();
+        FrmRegistrar f1= new FrmRegistrar();
+        UsuarioDAO pDAO = new UsuarioDAO();
+        ControladorUsuario cUsuario= new ControladorUsuario(f1,pDAO);
+        f1.setVisible(true);
+        f1.setLocationRelativeTo(f1);
 //<<<<<<< HEAD
 //         datoQuemados();//kleber
 //        

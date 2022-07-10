@@ -37,7 +37,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JButton();
-        btnCancelar1 = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
         txtContraseña = new javax.swing.JTextField();
@@ -48,7 +48,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
         txtID = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtMes = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         txtAño = new javax.swing.JTextField();
 
@@ -86,8 +86,13 @@ public class FrmRegistrar extends javax.swing.JFrame {
         btnRegistrar.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
         btnRegistrar.setText("Añadir");
 
-        btnCancelar1.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
-        btnCancelar1.setText("Cancelar");
+        btnLogin.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         txtContraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +153,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel11)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtMes, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel12)
                                         .addGap(18, 18, 18)
@@ -157,7 +162,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
                                 .addGap(86, 86, 86)
                                 .addComponent(btnRegistrar)
                                 .addGap(57, 57, 57)
-                                .addComponent(btnCancelar1))))
+                                .addComponent(btnLogin))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(162, 162, 162)
                         .addComponent(jLabel1)))
@@ -202,13 +207,13 @@ public class FrmRegistrar extends javax.swing.JFrame {
                     .addComponent(txtDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12)
                     .addComponent(txtAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrar)
-                    .addComponent(btnCancelar1))
+                    .addComponent(btnLogin))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
@@ -235,6 +240,10 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private void txtContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtContraseñaActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,7 +281,7 @@ public class FrmRegistrar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnCancelar1;
+    public javax.swing.JButton btnLogin;
     public javax.swing.JButton btnRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -287,13 +296,13 @@ public class FrmRegistrar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    public javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField txtApellido;
+    public javax.swing.JTextField txtApellido;
     public javax.swing.JTextField txtAño;
-    private javax.swing.JTextField txtContraseña;
+    public javax.swing.JTextField txtContraseña;
     public javax.swing.JTextField txtDia;
     public javax.swing.JTextField txtEmail;
     public javax.swing.JTextField txtID;
+    public javax.swing.JTextField txtMes;
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtNumeroCelular;
     public javax.swing.JTextField txtRepetirContraseña;

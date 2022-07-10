@@ -16,16 +16,23 @@ public class Usuario {
     private String contraseña;
     private String email;
     private String numeroCelular;
-    private Fecha fechaNacimiento;
+    private String dia;
+    private String mes;
+    private String año;
 
-    public Usuario(String nombre, String apellido, String id, String contraseña, String email, String numeroCelular, Fecha fechaNacimiento) {
+    public Usuario() {
+    }
+
+    public Usuario(String nombre, String apellido, String id, String contraseña, String email, String numeroCelular, String dia, String mes, String año) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.id = id;
         this.contraseña = contraseña;
         this.email = email;
         this.numeroCelular = numeroCelular;
-        this.fechaNacimiento = fechaNacimiento;
+        this.dia = dia;
+        this.mes = mes;
+        this.año = año;
     }
 
     public String getNombre() {
@@ -52,9 +59,16 @@ public class Usuario {
         return numeroCelular;
     }
 
-    public Fecha getFechaNacimiento() {
-        return fechaNacimiento;
+    public String getDia() {
+        return dia;
     }
 
-   
+    public String getMes() {
+        return mes;
+    }
+
+    public String getAño() {
+        return año;
+    }
+
 }

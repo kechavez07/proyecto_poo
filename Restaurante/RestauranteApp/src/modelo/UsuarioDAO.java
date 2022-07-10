@@ -6,6 +6,7 @@
 package modelo;
 
 import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
 
 /**
  *
@@ -21,7 +22,10 @@ public class UsuarioDAO {
         documento.put("contraseña", p.getContraseña());
         documento.put("email", p.getEmail());
         documento.put("numeroCelular", p.getNumeroCelular());
-        documento.put("fecha", p.getFechaNacimiento());
+        documento.put("dia", p.getDia());
+        documento.put("mes", p.getMes());
+        documento.put("año", p.getAño());
         objCon.coleccion.insert(documento);
     }
+   
 }
