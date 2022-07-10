@@ -1,9 +1,9 @@
 
 package controlador;
 
-import vista.VerIngredientes;
+import vista.FrmVerIngredientes;
 
 public class ControladorVisualisarIngredientes {
-    VerIngredientes vering = new VerIngredientes();
+    FrmVerIngredientes vering = new FrmVerIngredientes();
     
 }
