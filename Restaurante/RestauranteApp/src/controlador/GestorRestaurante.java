@@ -4,6 +4,8 @@ package controlador;
 
 import modelo.Conexion;
 import modelo.UsuarioDAO;
+import vista.FrmBebidas;
+import vista.FrmConfirmacion;
 import vista.FrmRegistrar;
 //<<<<<<< HEAD
 //import modelo.Ingrediente;
@@ -18,9 +20,12 @@ public class GestorRestaurante {
         Conexion c = new Conexion();
         FrmRegistrar f1= new FrmRegistrar();
         UsuarioDAO pDAO = new UsuarioDAO();
+        FrmBebidas bebidas= new FrmBebidas();
+        FrmConfirmacion confirmacion =new FrmConfirmacion();
         ControladorUsuario cUsuario= new ControladorUsuario(f1,pDAO);
-        f1.setVisible(true);
-        f1.setLocationRelativeTo(f1);
+        bebidas.setVisible(true);
+//f1.setVisible(true);
+        //f1.setLocationRelativeTo(f1);
 //<<<<<<< HEAD
 //         datoQuemados();//kleber
 //        
