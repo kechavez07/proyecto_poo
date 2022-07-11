@@ -30,7 +30,8 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
         objetoVistaBebidas.rbCoca.addActionListener(this);
         objetoVistaBebidas.txtCoca.addKeyListener(this);
         objetoVistaBebidas.rbFanta.addActionListener(this);
-        objetoVistaBebidas.rbSprit.addActionListener(this);
+        objetoVistaBebidas.rbSprite.addActionListener(this);
+        objetoVistaBebidas.txtSprite.addActionListener(this);
         objetoVistaBebidas.txtPedidoBebidas.addKeyListener(this);
         objetoVistaBebidas.btnAgregarBebidas.addActionListener(this);
         objetoVistaConfirmacion.btnConfirmar.addActionListener(this);
@@ -59,28 +60,38 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
                columna[2]= ped.getCantidad();
                columna[3]= (ped.getCantidad()*1);
            }
-           if(objetoVistaBebidas.rbSprit.isSelected()){
+           if(objetoVistaBebidas.rbSprite.isSelected()){
                columna[0]=ped.getNumeroPedido();
                columna[1]=ped.getNombrePedido();
                columna[2]= ped.getCantidad();
                columna[3]= (ped.getCantidad()*1);
            }
-         
-           
         }
         
     }
         @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==objetoVistaBebidas.btnAgregarBebidas){
-//            if(objetoVistaBebidas.rbCoca){
-//                
-//            }
             String numPedido=objetoVistaBebidas.txtPedidoBebidas.getText();
-            String nombrePed=objetoVistaBebidas.rbCoca.getLabel();
-            String cantidad= objetoVistaBebidas.txtCoca.getText();
-            Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
-            pedDAO.insertarPedidos(objPed);
+            if(objetoVistaBebidas.rbCoca.getLabel().equalsIgnoreCase("Coca cola")){ 
+                String nombrePed=objetoVistaBebidas.rbCoca.getLabel();
+                String cantidad= objetoVistaBebidas.txtCoca.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            if(objetoVistaBebidas.rbFanta.getLabel().equalsIgnoreCase("Fanta")){
+                String nombrePed=objetoVistaBebidas.rbFanta.getLabel();
+                String cantidad= objetoVistaBebidas.txtFanta.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            if(objetoVistaBebidas.rbSprite.getLabel().equalsIgnoreCase("Sprite")){
+                String nombrePed=objetoVistaBebidas.rbSprite.getLabel();
+                String cantidad= objetoVistaBebidas.txtSprite.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            
         }
         
     }
