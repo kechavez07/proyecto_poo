@@ -15,14 +15,9 @@ public class Conexion {
         MongoClient mongo=new MongoClient("localhost",27017);
         baseDatos= mongo.getDB("Restaurante");
         coleccion= baseDatos.getCollection("Usuario");
-<<<<<<< HEAD
         coleccionPedido=baseDatos.getCollection("Pedidos");
         System.out.println("Conexion aBD ok");
-
-        
-=======
         System.out.println("Conexion a BD ok");  
->>>>>>> 64e47d5 (ksadnf)
     }
 }
 
