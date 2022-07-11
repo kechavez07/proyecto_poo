@@ -14,13 +14,14 @@ import vista.FrmRegistrar;
 //>>>>>>> 8825532 (h)
 
 public class GestorRestaurante {
+    //Camilo 
      public static void main(String args[]){
         Conexion c = new Conexion();
-        FrmRegistrar f1= new FrmRegistrar();
+        FrmRegistrar r1= new FrmRegistrar();
         UsuarioDAO pDAO = new UsuarioDAO();
-        ControladorUsuario cUsuario= new ControladorUsuario(f1,pDAO);
-        f1.setVisible(true);
-        f1.setLocationRelativeTo(f1);
+        ControladorUsuario cUsuario= new ControladorUsuario(r1,pDAO);
+        r1.setVisible(true);
+        r1.setLocationRelativeTo(r1);
 //<<<<<<< HEAD
 //         datoQuemados();//kleber
 //        

@@ -41,7 +41,29 @@ public class ControladorUsuario implements ActionListener, KeyListener{
         objetoRegistrar.txtMes.addKeyListener(this);
         objetoRegistrar.txtAño.addKeyListener(this);
     }
+    public ControladorUsuario(FrmLogin vista,UsuarioDAO dao){
+        objetoLogin = vista;
+        objetoDAO= dao;
+        objetoLogin.btnLogin.addActionListener(this);
+        objetoLogin.btnCancelar.addActionListener(this);
+        objetoLogin.txtID.addKeyListener(this);
+        objetoLogin.txtContraseña.addKeyListener(this);
+    }
 
+    public ControladorUsuario(FrmPerfil vista,UsuarioDAO dao){
+        objetoPerfil = vista;
+        objetoDAO= dao;
+        objetoPerfil.btnEditar.addActionListener(this);
+        objetoPerfil.btnModificar.addActionListener(this);
+        objetoPerfil.txtNombre.addKeyListener(this);
+        objetoPerfil.txtApellido.addKeyListener(this);
+        objetoPerfil.txtContraseña.addKeyListener(this);
+        objetoPerfil.txtEmail.addKeyListener(this);
+        objetoPerfil.txtNumeroCelular.addKeyListener(this);
+        objetoPerfil.txtDia.addKeyListener(this);
+        objetoPerfil.txtMes.addKeyListener(this);
+        objetoPerfil.txtAño.addKeyListener(this);
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
             if(e.getSource()==objetoRegistrar.btnRegistrar){
