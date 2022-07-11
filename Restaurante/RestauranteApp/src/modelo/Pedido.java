@@ -1,13 +1,9 @@
 
 package modelo;
 
-/**
- *
- * @author Jeimy
- */
 public class Pedido {
     public String numeroPedido;
-    public String nombrePedido;
+    public String nombrePedido;// nombre del plato
     public int cantidad;
 
     public Pedido(String numeroPedido, String nombrePedido, int cantidad) {

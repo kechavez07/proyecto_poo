@@ -5,10 +5,6 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DBCursor;
 import java.util.ArrayList;
 
-/**
- *
- * @author Jeimy
- */
 public class PedidosDAO {
     public void insertarPedidos(Pedido ped){
         Conexion objCon = new Conexion();
