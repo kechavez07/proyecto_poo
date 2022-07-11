@@ -30,7 +30,7 @@ public class ControladorVisualisarIngredientes implements ActionListener {
         modeloT.addColumn("UNIDADES DE PLATO");
         modeloT.addColumn("TOTAL DE INGREDINTES");
 
-        Object[] columna = new Object[3];
+        Object[] columna = new Object[5];
 //        int numReg = .size();
 //        for (int i = 0; i < numReg; i++) {
 //            ObjetoEmp = (Empleado) objEmpDAO.obtenerEmpleados().get(i);

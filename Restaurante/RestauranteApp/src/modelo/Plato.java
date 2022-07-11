@@ -9,12 +9,13 @@ import java.util.List;
 public class Plato {
     private String nombre;
     List ingredientes;
-    private float cantidad_ingrediente;
+    
+    
 
-    public Plato(String nombre, List ingredientes, float cantidad_ingrediente) {
+    public Plato(String nombre, List ingredientes) {
         this.nombre = nombre;
         this.ingredientes = ingredientes;
-        this.cantidad_ingrediente = calcularCantidad();
+        
     }
 
     public Plato() {
@@ -42,15 +43,6 @@ public class Plato {
         this.ingredientes = ingredientes;
     }
 
-    public float getCantidad_ingrediente() {
-        return cantidad_ingrediente;
-    }
-
-    public void setCantidad_ingrediente(float cantidad_ingrediente) {
-        this.cantidad_ingrediente = cantidad_ingrediente;
-    }
-
-    
     public void addIn(Ingrediente obj){
         ingredientes.add(obj);
     }
@@ -72,7 +64,7 @@ public float calcularCantidad(){
 
     @Override
     public String toString() {
-        return "Plato{" + "nombre=" + nombre + ", ingredientes=" + ingredientes + ", cantidad_ingrediente=" + cantidad_ingrediente + '}';
+        return "Plato{" + "nombre=" + nombre + ", ingredientes=" + ingredientes + '}';
     }
 
     
