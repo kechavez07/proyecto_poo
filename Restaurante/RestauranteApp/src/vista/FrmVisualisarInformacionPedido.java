@@ -44,6 +44,11 @@ public class FrmVisualisarInformacionPedido extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         btnVerIngredientes.setText("Ver  informacionde ingredientes");
+        btnVerIngredientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerIngredientesActionPerformed(evt);
+            }
+        });
 
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -80,9 +85,9 @@ public class FrmVisualisarInformacionPedido extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVerIngredientes)
-                    .addComponent(btnSalir))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSalir)
+                    .addComponent(btnVerIngredientes, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -107,6 +112,10 @@ public class FrmVisualisarInformacionPedido extends javax.swing.JFrame {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnVerIngredientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerIngredientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerIngredientesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,7 +154,7 @@ public class FrmVisualisarInformacionPedido extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSalir;
-    private javax.swing.JButton btnVerIngredientes;
+    public javax.swing.JButton btnVerIngredientes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

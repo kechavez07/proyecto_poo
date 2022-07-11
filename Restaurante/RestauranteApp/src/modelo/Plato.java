@@ -17,6 +17,9 @@ public class Plato {
         this.cantidad_ingrediente = calcularCantidad();
     }
 
+    public Plato() {
+    }
+
     public Plato(String nombre) {
         this.nombre = nombre;
         ingredientes = new ArrayList<Ingrediente>();
