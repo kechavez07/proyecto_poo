@@ -90,6 +90,7 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
                 String cantidad= objetoVistaBebidas.txtSprite.getText();
                 Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
                 pedDAO.insertarPedidos(objPed);
+                
             }
             
         }

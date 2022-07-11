@@ -8,7 +8,7 @@ import modelo.PedidosDAO;
 import modelo.Plato;
 import vista.FrmBebidas;
 import vista.FrmConfirmacion;
-<<<<<<< HEAD
+
 import modelo.UsuarioDAO;
 import vista.FrmBebidas;
 import vista.FrmConfirmacion;
@@ -17,14 +17,14 @@ import modelo.Ingrediente;
 import modelo.Plato;
 import vista.FrmBebidas;
 import vista.FrmConfirmacion;
-=======
 
->>>>>>> d1a60be (hola3)
+
+
 import modelo.Ingrediente;
 import vista.FrmBebidas;
 import vista.FrmConfirmacion;
 import vista.FrmVisualisarInformacionPedido;
-<<<<<<< HEAD
+
 public class GestorRestaurante {
     //Camilo 
      public static void main(String args[]){
@@ -35,14 +35,14 @@ public class GestorRestaurante {
         bebidas.setVisible(true);
 //f1.setVisible(true);
         //datoQuemados();//kleber
-        FrmRegistrar r1= new FrmRegistrar();
-        FrmVisualisarInformacionPedido rv = new FrmVisualisarInformacionPedido();//kleber
-        ControladorVisualisarIngredientes cVerin =new ControladorVisualisarIngredientes(rv);//kleber
-        UsuarioDAO pDAO = new UsuarioDAO();
-        ControladorUsuario cUsuario= new ControladorUsuario(r1,pDAO);
-        rv.setVisible(true);
-        r1.setVisible(true);
-        r1.setLocationRelativeTo(r1);
+//        FrmRegistrar r1= new FrmRegistrar();
+//        FrmVisualisarInformacionPedido rv = new FrmVisualisarInformacionPedido();//kleber
+//        ControladorVisualisarIngredientes cVerin =new ControladorVisualisarIngredientes(rv);//kleber
+//        UsuarioDAO pDAO = new UsuarioDAO();
+//        ControladorUsuario cUsuario= new ControladorUsuario(r1,pDAO);
+//        rv.setVisible(true);
+//        r1.setVisible(true);
+//        r1.setLocationRelativeTo(r1);
 
          
 //        
@@ -54,28 +54,8 @@ public class GestorRestaurante {
 
      }
      
-     //kleber
-=======
 
 
-public class GestorRestaurante {
-    //Camilo 
-     public static void main(String args[]){
-
-
-        FrmBebidas bebidas= new FrmBebidas();
-        FrmConfirmacion confirmacion =new FrmConfirmacion();
-        PedidosDAO ped= new PedidosDAO();
-        ControladorRestaurante c= new ControladorRestaurante(bebidas,ped);
-        bebidas.setVisible(true);
-//f1.setVisible(true);
-     }
-}
-
-      
-
-
->>>>>>> d1a60be (hola3)
 
 //    public static void datoQuemados(){
 //       //BOLONES 6
@@ -117,8 +97,5 @@ public class GestorRestaurante {
 //        System.out.println(bolones.toString());
 //        System.out.println(bolones.calcularCantidad());
 //     }
-<<<<<<< HEAD
-     
+
 }
-=======
->>>>>>> d1a60be (hola3)
