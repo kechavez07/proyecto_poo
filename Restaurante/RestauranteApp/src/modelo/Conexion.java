@@ -17,13 +17,6 @@ public class Conexion {
         coleccion= baseDatos.getCollection("Usuario");
         coleccionPedido=baseDatos.getCollection("Pedidos");
         System.out.println("Conexion aBD ok");
-        System.out.println("Conexion a BD ok");  
-
-        coleccionPedido=baseDatos.getCollection("Pedidos");
-        System.out.println("Conexion aBD ok");
-
-        System.out.println("Conexion a BD ok");  
-
     }
 }
 
