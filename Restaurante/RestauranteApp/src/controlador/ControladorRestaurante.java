@@ -56,17 +56,13 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
     public ControladorRestaurante(FrmEntradas vistaE,PedidosDAO dao ){
         objetoVistaEntradas = vistaE;
         pedDAO= dao;
+        objetoVistaEntradas.btnAgregarEntrada.addActionListener(this);
         objetoVistaEntradas.rbBolonVerde.addActionListener(this);
-        
-        objetoVistaFuerte.rbChurrasco.addActionListener(this);
-        objetoVistaFuerte.rbEncebollado.addActionListener(this);
-        objetoVistaFuerte.txtCantidadArroz.addKeyListener(this);
-        objetoVistaFuerte.txtCantidadChurrasco.addKeyListener(this);
-        objetoVistaFuerte.txtCantidadEncebollado.addKeyListener(this);
-        objetoVistaFuerte.btnAgregarFuerte.addActionListener(this);
-        objetoVistaFuerte.jlArrosPrecio.addKeyListener(this);
-        objetoVistaFuerte.jlChurrascoPrecio.addKeyListener(this);
-        objetoVistaFuerte.jlEncebollado.addKeyListener(this);
+        objetoVistaEntradas.rbEmpanadaMorocho.addActionListener(this);
+        objetoVistaEntradas.rbPanYuca.addActionListener(this);
+        objetoVistaEntradas.txtCantidadBolon.addKeyListener(this);
+        objetoVistaEntradas.txtCantidadEmpanadasMorocho.addKeyListener(this);
+        objetoVistaEntradas.txtCantidadPan.addKeyListener(this);
         
     }
     public void llenarTablaEntrada(JTable tablaD){
@@ -203,6 +199,27 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
             if(objetoVistaFuerte.rbEncebollado.getLabel().equalsIgnoreCase("Encebollado")){
                 String nombrePed=objetoVistaFuerte.rbChurrasco.getLabel();
                 String cantidad= objetoVistaFuerte.txtCantidadEncebollado.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+        }
+        if(e.getSource()==objetoVistaEntradas.btnAgregarEntrada){
+            String numPedido=objetoVistaEntradas.txtPedidoEntrada.getText();
+            if(objetoVistaEntradas.rbBolonVerde.getLabel().equalsIgnoreCase("Bolon de Verde")){ 
+                String nombrePed=objetoVistaEntradas.rbBolonVerde.getLabel();
+                String cantidad= objetoVistaEntradas.txtCantidadBolon.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            if(objetoVistaEntradas.rbEmpanadaMorocho.getLabel().equalsIgnoreCase("Empanadas de morocho")){
+                String nombrePed=objetoVistaEntradas.rbEmpanadaMorocho.getLabel();
+                String cantidad= objetoVistaEntradas.txtCantidadEmpanadasMorocho.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            if(objetoVistaEntradas.rbPanYuca.getLabel().equalsIgnoreCase("Pan de Yuca")){
+                String nombrePed=objetoVistaEntradas.rbPanYuca.getLabel();
+                String cantidad= objetoVistaEntradas.txtCantidadEmpanadasMorocho.getText();
                 Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
                 pedDAO.insertarPedidos(objPed);
             }

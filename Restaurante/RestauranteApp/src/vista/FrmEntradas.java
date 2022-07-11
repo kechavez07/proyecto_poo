@@ -31,17 +31,19 @@ public class FrmEntradas extends javax.swing.JFrame {
         rbBolonVerde = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtBolon = new javax.swing.JTextField();
+        txtCantidadBolon = new javax.swing.JTextField();
         rbEmpanadaMorocho = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtEmpanadasMorocho = new javax.swing.JTextField();
+        txtCantidadEmpanadasMorocho = new javax.swing.JTextField();
         btnAgregarEntrada = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtPedidoEntrada = new javax.swing.JTextField();
         rbPanYuca = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtCantidadPan = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,13 +55,18 @@ public class FrmEntradas extends javax.swing.JFrame {
         rbBolonVerde.setBackground(new java.awt.Color(255, 255, 255));
         rbBolonVerde.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
         rbBolonVerde.setText("Bolon de Verde");
+        rbBolonVerde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbBolonVerdeActionPerformed(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/Bolon.jpg"))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
         jLabel3.setText("Cantidad: ");
 
-        txtBolon.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
+        txtCantidadBolon.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
 
         rbEmpanadaMorocho.setBackground(new java.awt.Color(255, 255, 255));
         rbEmpanadaMorocho.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
@@ -70,7 +77,7 @@ public class FrmEntradas extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
         jLabel5.setText("Cantidad: ");
 
-        txtEmpanadasMorocho.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
+        txtCantidadEmpanadasMorocho.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
 
         btnAgregarEntrada.setBackground(new java.awt.Color(255, 204, 204));
         btnAgregarEntrada.setFont(new java.awt.Font("Cooper Black", 1, 14)); // NOI18N
@@ -91,6 +98,14 @@ public class FrmEntradas extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iimagenes/panyuca.jpg"))); // NOI18N
 
+        jLabel8.setText("Cantidad: ");
+
+        txtCantidadPan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCantidadPanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -105,7 +120,7 @@ public class FrmEntradas extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtPedidoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,9 +130,12 @@ public class FrmEntradas extends javax.swing.JFrame {
                             .addComponent(rbBolonVerde)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtBolon, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txtCantidadBolon, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rbEmpanadaMorocho)
@@ -128,7 +146,7 @@ public class FrmEntradas extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txtEmpanadasMorocho, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(txtCantidadEmpanadasMorocho, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(86, 86, 86))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,11 +156,15 @@ public class FrmEntradas extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(201, 201, 201)
                         .addComponent(btnAgregarEntrada))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(rbPanYuca))))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(txtCantidadPan, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGap(42, 42, 42)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel7)
+                                .addComponent(rbPanYuca)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -153,7 +175,7 @@ public class FrmEntradas extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPedidoEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbBolonVerde)
@@ -164,17 +186,21 @@ public class FrmEntradas extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtEmpanadasMorocho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCantidadEmpanadasMorocho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(txtBolon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCantidadBolon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel5)))
                 .addGap(66, 66, 66)
                 .addComponent(rbPanYuca)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtCantidadPan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addComponent(btnAgregarEntrada)
                 .addGap(35, 35, 35)
                 .addComponent(btnRegresar)
@@ -191,7 +217,9 @@ public class FrmEntradas extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -200,6 +228,14 @@ public class FrmEntradas extends javax.swing.JFrame {
     private void btnAgregarEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEntradaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAgregarEntradaActionPerformed
+
+    private void txtCantidadPanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadPanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCantidadPanActionPerformed
+
+    private void rbBolonVerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbBolonVerdeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbBolonVerdeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,7 +273,7 @@ public class FrmEntradas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAgregarEntrada;
+    public javax.swing.JButton btnAgregarEntrada;
     private javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -246,13 +282,15 @@ public class FrmEntradas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     public javax.swing.JRadioButton rbBolonVerde;
     public javax.swing.JRadioButton rbEmpanadaMorocho;
     public javax.swing.JRadioButton rbPanYuca;
-    public javax.swing.JTextField txtBolon;
-    public javax.swing.JTextField txtEmpanadasMorocho;
+    public javax.swing.JTextField txtCantidadBolon;
+    public javax.swing.JTextField txtCantidadEmpanadasMorocho;
+    public javax.swing.JTextField txtCantidadPan;
+    public javax.swing.JTextField txtPedidoEntrada;
     // End of variables declaration//GEN-END:variables
 
 }
