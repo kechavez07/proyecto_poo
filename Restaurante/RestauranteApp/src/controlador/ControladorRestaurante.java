@@ -24,7 +24,9 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
     FrmPostre objetoVistaPostre= new FrmPostre();
     FrmConfirmacion objetoVistaConfirmacion= new FrmConfirmacion();
 //Jeimy no tocar 
-    public ControladorRestaurante() {
+    public ControladorRestaurante(FrmBebidas vistab ,PedidosDAO dao ) {
+        objetoVistaBebidas=vistab;
+        pedDAO= dao;
         objetoVistaBebidas.rbCoca.addActionListener(this);
         objetoVistaBebidas.txtCoca.addKeyListener(this);
         objetoVistaBebidas.rbFanta.addActionListener(this);
@@ -51,6 +53,19 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
                columna[2]= ped.getCantidad();
                columna[3]= (ped.getCantidad()*1);
            }
+           if(objetoVistaBebidas.rbFanta.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+           if(objetoVistaBebidas.rbSprit.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+         
            
         }
         
@@ -58,6 +73,9 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
         @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==objetoVistaBebidas.btnAgregarBebidas){
+//            if(objetoVistaBebidas.rbCoca){
+//                
+//            }
             String numPedido=objetoVistaBebidas.txtPedidoBebidas.getText();
             String nombrePed=objetoVistaBebidas.rbCoca.getLabel();
             String cantidad= objetoVistaBebidas.txtCoca.getText();
