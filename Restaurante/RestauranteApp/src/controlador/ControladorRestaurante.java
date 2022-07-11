@@ -37,6 +37,101 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
         objetoVistaConfirmacion.btnConfirmar.addActionListener(this);
         
     }
+    
+    public ControladorRestaurante(FrmFuerte vistaF,PedidosDAO dao ){
+        objetoVistaFuerte = vistaF;
+        pedDAO= dao;
+        objetoVistaFuerte.rbArroz.addActionListener(this);
+        objetoVistaFuerte.rbChurrasco.addActionListener(this);
+        objetoVistaFuerte.rbEncebollado.addActionListener(this);
+        objetoVistaFuerte.txtCantidadArroz.addKeyListener(this);
+        objetoVistaFuerte.txtCantidadChurrasco.addKeyListener(this);
+        objetoVistaFuerte.txtCantidadEncebollado.addKeyListener(this);
+        objetoVistaFuerte.btnAgregarFuerte.addActionListener(this);
+        objetoVistaFuerte.jlArrosPrecio.addKeyListener(this);
+        objetoVistaFuerte.jlChurrascoPrecio.addKeyListener(this);
+        objetoVistaFuerte.jlEncebollado.addKeyListener(this);
+        
+    }
+    public ControladorRestaurante(FrmEntradas vistaE,PedidosDAO dao ){
+        objetoVistaEntradas = vistaE;
+        pedDAO= dao;
+        objetoVistaEntradas.rbBolonVerde.addActionListener(this);
+        
+        objetoVistaFuerte.rbChurrasco.addActionListener(this);
+        objetoVistaFuerte.rbEncebollado.addActionListener(this);
+        objetoVistaFuerte.txtCantidadArroz.addKeyListener(this);
+        objetoVistaFuerte.txtCantidadChurrasco.addKeyListener(this);
+        objetoVistaFuerte.txtCantidadEncebollado.addKeyListener(this);
+        objetoVistaFuerte.btnAgregarFuerte.addActionListener(this);
+        objetoVistaFuerte.jlArrosPrecio.addKeyListener(this);
+        objetoVistaFuerte.jlChurrascoPrecio.addKeyListener(this);
+        objetoVistaFuerte.jlEncebollado.addKeyListener(this);
+        
+    }
+    public void llenarTablaEntrada(JTable tablaD){
+        DefaultTableModel modeloT= new DefaultTableModel();
+        tablaD.setModel(modeloT);
+        modeloT.addColumn("Numero de pedido");
+        modeloT.addColumn("Descripcion");
+        modeloT.addColumn("Cantidad");
+        modeloT.addColumn("Total");
+        Object [] columna = new Object[4];
+        int numReg = pedDAO.obtenerPedidos().size();
+        for(int i=0; i<numReg ;i++){
+           ped=(Pedido)pedDAO.obtenerPedidos().get(i);
+           if(objetoVistaFuerte.rbArroz.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+           if(objetoVistaFuerte.rbChurrasco.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+           if(objetoVistaFuerte.rbEncebollado.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+        }     
+    }
+    public void llenarTablaFuerte(JTable tablaD){
+        DefaultTableModel modeloT= new DefaultTableModel();
+        tablaD.setModel(modeloT);
+        modeloT.addColumn("Numero de pedido");
+        modeloT.addColumn("Descripcion");
+        modeloT.addColumn("Cantidad");
+        modeloT.addColumn("Total");
+        Object [] columna = new Object[4];
+        int numReg = pedDAO.obtenerPedidos().size();
+        for(int i=0; i<numReg ;i++){
+           ped=(Pedido)pedDAO.obtenerPedidos().get(i);
+           if(objetoVistaFuerte.rbArroz.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+           if(objetoVistaFuerte.rbChurrasco.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+           if(objetoVistaFuerte.rbEncebollado.isSelected()){
+               columna[0]=ped.getNumeroPedido();
+               columna[1]=ped.getNombrePedido();
+               columna[2]= ped.getCantidad();
+               columna[3]= (ped.getCantidad()*1);
+           }
+        }     
+    }
+    
     public void llenarTabla(JTable tablaD){
         DefaultTableModel modeloT= new DefaultTableModel();
         tablaD.setModel(modeloT);
@@ -67,7 +162,6 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
                columna[3]= (ped.getCantidad()*1);
            }
         }
-        
     }
         @Override
     public void actionPerformed(ActionEvent e) {
@@ -90,11 +184,29 @@ public class ControladorRestaurante implements ActionListener, KeyListener  {
                 String cantidad= objetoVistaBebidas.txtSprite.getText();
                 Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
                 pedDAO.insertarPedidos(objPed);
-                
             }
-            
         }
-        
+        if(e.getSource()==objetoVistaFuerte.btnAgregarFuerte){
+            String numPedido=objetoVistaFuerte.txtPedidoFuertes.getText();
+            if(objetoVistaFuerte.rbArroz.getLabel().equalsIgnoreCase("Arroz con Conchas")){ 
+                String nombrePed=objetoVistaFuerte.rbArroz.getLabel();
+                String cantidad= objetoVistaFuerte.txtCantidadArroz.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            if(objetoVistaFuerte.rbChurrasco.getLabel().equalsIgnoreCase("Churrasco")){
+                String nombrePed=objetoVistaFuerte.rbChurrasco.getLabel();
+                String cantidad= objetoVistaFuerte.txtCantidadChurrasco.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+            if(objetoVistaFuerte.rbEncebollado.getLabel().equalsIgnoreCase("Encebollado")){
+                String nombrePed=objetoVistaFuerte.rbChurrasco.getLabel();
+                String cantidad= objetoVistaFuerte.txtCantidadEncebollado.getText();
+                Pedido objPed= new Pedido(numPedido,nombrePed, Integer.parseInt(cantidad));
+                pedDAO.insertarPedidos(objPed);
+            }
+        }
     }
 
     @Override

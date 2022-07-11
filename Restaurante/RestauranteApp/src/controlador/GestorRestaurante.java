@@ -23,16 +23,21 @@ import vista.FrmConfirmacion;
 import modelo.Ingrediente;
 import vista.FrmBebidas;
 import vista.FrmConfirmacion;
+import vista.FrmFuerte;
 import vista.FrmVisualisarInformacionPedido;
 
 public class GestorRestaurante {
     //Camilo 
      public static void main(String args[]){
         FrmBebidas bebidas= new FrmBebidas();
+        FrmFuerte fuerte= new FrmFuerte();
         FrmConfirmacion confirmacion =new FrmConfirmacion();
         PedidosDAO ped= new PedidosDAO();
         ControladorRestaurante c= new ControladorRestaurante(bebidas,ped);       
-        bebidas.setVisible(true);
+        ControladorRestaurante c1= new ControladorRestaurante(fuerte,ped);       
+        
+        fuerte.setVisible(true);
+        //bebidas.setVisible(true);
 //f1.setVisible(true);
         //datoQuemados();//kleber
 //        FrmRegistrar r1= new FrmRegistrar();
