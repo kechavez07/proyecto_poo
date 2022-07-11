@@ -3,17 +3,49 @@ package controlador;
 
 
 import modelo.Conexion;
+<<<<<<< HEAD
 
 import modelo.Ingrediente;
 import modelo.Plato;
 import vista.FrmBebidas;
 import vista.FrmConfirmacion;
 
+=======
+import modelo.UsuarioDAO;
+import vista.FrmRegistrar;
+//<<<<<<< HEAD
+//import modelo.Ingrediente;
+//import modelo.Plato;
+//=======
+//import vista.FrmBebidas;
+//import vista.FrmConfirmacion;
+//>>>>>>> 8825532 (h)
+>>>>>>> ef54dbc9988a8c2273443394f843412e96f4eadc
 
 public class GestorRestaurante {
+    //Camilo 
      public static void main(String args[]){
+<<<<<<< HEAD
          Conexion c = new Conexion();
          datoQuemados();
+=======
+        Conexion c = new Conexion();
+        FrmRegistrar r1= new FrmRegistrar();
+        UsuarioDAO pDAO = new UsuarioDAO();
+        ControladorUsuario cUsuario= new ControladorUsuario(r1,pDAO);
+        r1.setVisible(true);
+        r1.setLocationRelativeTo(r1);
+//<<<<<<< HEAD
+//         datoQuemados();//kleber
+//        
+//=======
+//         FrmBebidas fBebidas=new FrmBebidas();
+//         FrmConfirmacion fConfirmacion= new FrmConfirmacion();
+//         ControladorRestaurante cRestaurante= new ControladorRestaurante();
+//         fBebidas.setVisible(true);
+//         fConfirmacion.setVisible(true);
+//>>>>>>> 8825532 (h)
+>>>>>>> ef54dbc9988a8c2273443394f843412e96f4eadc
          
          
      }
