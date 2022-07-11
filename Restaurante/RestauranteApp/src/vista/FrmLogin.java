@@ -32,7 +32,7 @@ public class FrmLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        txtID2 = new javax.swing.JTextField();
+        txtID = new javax.swing.JTextField();
         txtContraseña = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +50,11 @@ public class FrmLogin extends javax.swing.JFrame {
 
         btnLogin.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
         btnLogin.setText("Ingresar");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setFont(new java.awt.Font("Cooper Black", 0, 12)); // NOI18N
         btnCancelar.setText("Cancelar");
@@ -81,7 +86,7 @@ public class FrmLogin extends javax.swing.JFrame {
                                     .addComponent(jLabel2))
                                 .addGap(39, 39, 39)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtID2)
+                                    .addComponent(txtID)
                                     .addComponent(txtContraseña))))))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
@@ -93,7 +98,7 @@ public class FrmLogin extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtID2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -124,6 +129,10 @@ public class FrmLogin extends javax.swing.JFrame {
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,7 +176,7 @@ public class FrmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txtContraseña;
-    public javax.swing.JTextField txtID2;
+    public javax.swing.JPasswordField txtContraseña;
+    public javax.swing.JTextField txtID;
     // End of variables declaration//GEN-END:variables
 }
